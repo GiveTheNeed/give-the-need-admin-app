@@ -1,0 +1,50 @@
+$link-highlight: #b90000;
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.flex-container>a {
+    // background-color: #4267B2;
+    margin: 5px;
+    padding: 5px;
+    // color: #f5f5f5;
+}
+
+.toolbar-div>a:hover {
+    background-color: #4267B2;
+    color: #ffffff;
+}
+
+.toolbar-div>span:hover {
+    color: $link-highlight;
+}
+
+.flex-container>span {
+    margin: 10px;
+    font-weight: 400;
+    color: #818181;
+}
+
+.active-link {
+    color: $link-highlight;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+.toolbar-div > * {
+    margin: 0 15px !important;
+}
+
+.flex-container > * {
+    margin-bottom: 15px !important;
+}
+
+.flex-container>.active-link {
+    color: $link-highlight;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}

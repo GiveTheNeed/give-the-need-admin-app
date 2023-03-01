@@ -1,1 +1,223 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    min-height: 100vh;
+    // background-color: #dadcde;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    // font-family: 'Open Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    // font-family: 'Nerko One', cursive;
+    // font-family: 'Noto Sans', sans-serif;
+}
+
+*:not(i):not(.fa):not(.fas):not(mat-icon) {
+    // font-family: 'Open Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    // font-family: 'Nerko One', cursive;
+    // font-family: 'Noto Sans', sans-serif;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.large-button {
+    height: 3.2em;
+    font-size: medium;
+}
+
+.rounded-corner {
+    border-radius: 10px !important;
+}
+
+.card {
+    border-radius: 10px !important;
+    // border: transparent;
+}
+
+.grey-card {
+    background-color: #F8F9FA !important;
+    box-shadow: 0 4px 8px 0 #F8F9FA;
+}
+
+.container-shadow {
+    box-shadow: 0 4px 8px 0 rgba(199, 192, 192, 0.2);
+}
+
+.image-div > img {
+    height: 230px !important
+}
+
+.justify-content {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.header-with-background {
+    // color: #ffffff;
+    // background-color: #bb0808;
+    color: #bb0808;
+}
+
+.blue-font {
+    color: #0071bc;
+}
+
+@media (max-width: 992px) {
+    .image-div > img {
+        height: 100% !important;
+    }
+}
+
+/* Clear floats */
+.row:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+/* 2/3 column */
+.column-60 {
+    float: left;
+    width: 60%;
+    padding: 20px;
+}
+
+/* 1/3 column */
+.column-40 {
+    float: left;
+    width: 40%;
+    padding: 20px;
+}
+
+/* Add responsiveness - make the columns appear on top of each other instead of next to each other on small screens */
+@media screen and (max-width: 1000px) {
+
+    .column-60,
+    .column-40 {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+// Scrollbar
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 50px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+// Scrollbar
+
+
+body {
+    color: #777;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #283228;
+}
+
+h1 {
+    font-size: 54px;
+    font-weight: 800;
+}
+
+.body-text {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+h3 {
+    margin: 10px 0 20px 0;
+    // letter-spacing: 10px;
+    font-size: 24px;
+    color: #283228;
+}
+
+h4 {
+    margin: 10px 0 20px 0;
+    // letter-spacing: 10px;
+    font-size: 20px;
+    color: #283228;
+}
+
+.person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+}
+
+.person:hover {
+    border-color: #f1f1f1;
+}
+
+.carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(20%);
+    /* make all photos black and white */
+    width: 100%;
+    /* Set width to 100% */
+    margin: auto;
+}
+
+.carousel-caption h3 {
+    color: #fff !important;
+}
+
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none;
+        /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+}
+
+.bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+}
+
+.bg-1 h3 {
+    color: #fff;
+}
+
+.bg-1 p {
+    font-style: italic;
+}
+
+.list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.nav-tabs li a {
+    color: #777;
+}

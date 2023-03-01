@@ -1,0 +1,50 @@
+<div class="container text-center p-4">
+
+    <h2><strong class="header-with-background">Charity Services</strong></h2>
+    <div class="body-text justify-content mt-3 text-start">
+        <h5>GiveTheNeed charity services are crearting a sustainable and lasting impact for children, families and
+            entire
+            communities. We make a difference in someone’s life who is in NEED through a shared sense of empathy and
+            responsibility driven by initiatives, volunteers and donations.</h5>
+    </div>
+
+    <h2 class="mt-5"><strong class="header-with-background">Causes</strong></h2>
+    <div class="body-text justify-content mt-3 text-start">
+        <ul>
+            <li>
+                <h5>FeedTheNeed program helping feed people through collaboration to food banks, rescue missions,
+                    shelters,
+                    orphanages, disability centers, rehab, old-age homes locally and internationally. Together, with our
+                    partners and volunteers, we are able to achieve incredible goals.</h5>
+            </li>
+            <li>
+                <h5>Child Education program cares for basic right of education for every child. We sponsor financial AID
+                    to the
+                    most deserving and need students by intesive eligiblity qualification.</h5>
+            </li>
+            <li>
+                <h5>Autism: We support intellectually disabled children through patnering with schools that help teach
+                    skills to function as independently as possible on a daily basis. Advocate for the rights and full
+                    participation of all people with intellectual and developmental disabilities.</h5>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mt-5">
+        <h2><strong class="header-with-background">Past Events</strong></h2>
+
+        <section id="image-gallery" class="mt-5">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-5" *ngFor="let event of events;">
+                    <div class="event-content">
+                        <strong class="p-3"
+                            style="text-decoration: underline; text-underline-offset: 10px; color: grey;">{{event?.name}}</strong>
+                        <div class="card border container-shadow rounded text-center mt-4">
+                            <img class="rounded rounded-corner" [src]="event?.imagePath" height="350">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

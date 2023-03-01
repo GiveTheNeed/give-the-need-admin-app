@@ -1,0 +1,47 @@
+<div class="container mt-5">
+
+    <section id="header text-center">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Blogs</h1>
+            </div>
+            <div class="offset-md-4 col-md-2 text-end">
+                <mat-form-field appearance="fill">
+                    <mat-label>Categories</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let category of categories" [value]="category.value">
+                            {{category.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+    </section>
+
+    <div *ngIf="!blogs$.length;then empty_content else content"></div>
+    <ng-template #empty_content>
+        <div class="text-center mt-5">
+            <img src="assets/images/empty-blogs.png" height="250" alt="No blogs">
+            <h2 class="mt-5">No blogs</h2>
+        </div>
+    </ng-template>
+
+    <ng-template #content>
+        <div class="row">
+            <div class="col-md-4 col-12 mb-4" *ngFor="let blog of blogs$;">
+                <div class="card p-3 pointer" [routerLink]="['./blog-details', blog._id]">
+                    <img [src]="blog?.blogImage" height="200" width="100%" alt="blog image"
+                        *ngIf="blog?.blogImage; else no_blog_image">
+                    <ng-template #no_blog_image>
+                        <img [src]="blog?.blogImage" height="200" alt="blog">
+                    </ng-template>
+                    <h6><strong>{{blog?.title}}</strong></h6>
+                    <p class="d-flex justify-content-between text-secondary pb-0 mb-0">
+                        <span>{{blog?.createdBy?.name?.firstName}} {{blog?.createdBy?.name?.lastName}}</span>
+                        <span>{{blog?.createdOn | date: 'dd-MM-yyyy'}}</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>

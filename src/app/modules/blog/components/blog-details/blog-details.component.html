@@ -1,0 +1,118 @@
+<div class="mt-5">
+    <div class="image-div">
+        <img [src]="blog$?.blogImage" class="img-fluid mx-auto d-block" alt="Blog cover photo"
+            *ngIf="blog$?.blogImage; else no_blog_image">
+    </div>
+</div>
+
+<ng-template #no_blog_image>
+    <div class="image-div">
+        <img src="assets/images/article.jpg" class="img-fluid mx-auto d-block" alt="Blog cover photo">
+    </div>
+</ng-template>
+
+<div class="container text-start">
+    <div class="card mb-3 p-3">
+        <div class="card-body">
+            <h2 class="mt-3"><strong>{{blog$?.title}}</strong></h2>
+            <p class="text-secondary mt-3">
+                {{blog$?.createdBy?.name?.firstName}} {{blog$?.createdBy?.name?.lastName}}
+                &#x2022;&nbsp;{{blog$?.createdOn | date: 'dd-MM-yyyy'}}
+            </p>
+            <hr>
+            <div class="mt-5">
+                <p>GiveTheNeed is a certifying organization for the President's Volunteer Service Award.A Certifying
+                    Organization is
+                    an organization that has been granted authority through an application and review process to give
+                    out the PVSA
+                    to volunteers. Certifying Organizations verify and certify that a volunteer has met the requirements
+                    to receive
+                    a PVSA within a 12 month period specified by the Certifying Organization. Only Certifying
+                    Organizations can
+                    certify volunteers’ eligibility for the PVSA and order awards.This award honors individuals whose
+                    service
+                    positively impacts communities in every corner of the nation and inspires those around them to take
+                    action, too.
+                    The PVSA has continued to honor the volunteers who are using their time and talents to solve some of
+                    the
+                    toughest challenges facing our nation!</p>
+                <h3>Volunteer Eligibility</h3>
+                <ul>
+                    <li>United States citizen or lawful permanent resident of the United States (i.e., green card
+                        holder)</li>
+                    <li>Must be at least five years old</li>
+                    <li>Volunteer must complete eligible service within a 12-month period (for annual Bronze, Silver,
+                        and Gold Awards) and over a lifetime (for Lifetime Achievement Awards)</li>
+                </ul>
+                <h3>Eligible Service</h3>
+                <ul>
+                    <li>Unpaid acts of volunteer service benefitting others</li>
+                    <li>Service through National service programs that provide a stipend (e.g., Peace Corps, AmeriCorps)
+                        may count towards the Lifetime Achievement Award*, but not for the annual Bronze, Silver, and
+                        Gold Awards)</li>
+                    <li>Travel stipends, transit/parking passes, membership passes, expense reimbursements, and other
+                        nominal volunteer support do not impact service eligibility</li>
+                </ul>
+                <h3>Eligible Service does not include</h3>
+                <ul>
+                    <li>Donating funds</li>
+                    <li>Political lobbying (Non-partisan voter registration is an eligible activity)</li>
+                    <li>Religious instruction</li>
+                    <li>Conducting worship service</li>
+                    <li>Proselytizing</li>
+                    <li>Volunteer service performed as part of court-ordered community service</li>
+                    <li>Serving only family members</li>
+                </ul>
+                <h3>Hours Required to Earn Awards in Each Age Group</h3>
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z2 mt-3">
+
+                    <ng-container matColumnDef="age">
+                        <th mat-header-cell *matHeaderCellDef> Volunteer Age </th>
+                        <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="bronze">
+                        <th mat-header-cell *matHeaderCellDef> Bronze </th>
+                        <td mat-cell *matCellDef="let element"> {{element.bronze}} </td>
+                    </ng-container>
+
+                    <!-- Weight Column -->
+                    <ng-container matColumnDef="silver">
+                        <th mat-header-cell *matHeaderCellDef> Silver </th>
+                        <td mat-cell *matCellDef="let element"> {{element.silver}} </td>
+                    </ng-container>
+
+                    <!-- Symbol Column -->
+                    <ng-container matColumnDef="gold">
+                        <th mat-header-cell *matHeaderCellDef> Gold </th>
+                        <td mat-cell *matCellDef="let element"> {{element.gold}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="lifetimeAchievementAward">
+                        <th mat-header-cell *matHeaderCellDef> President’s Lifetime Achievement Award </th>
+                        <td mat-cell *matCellDef="let element"> {{element.lifetimeAchievementAward}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="FAQ">
+    <div class="container card p-3">
+        <hr>
+        <div class="card-body">
+            <h2>Frequently Asked Questions</h2>
+            <div class="row mt-5">
+                <div class="col-md-12 mb-3" *ngFor="let faq of FAQs;">
+                    <strong>{{faq?.question}}</strong>
+                    <p [innerHTML]="faq?.answer"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

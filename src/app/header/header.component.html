@@ -1,0 +1,13 @@
+<mat-toolbar fxLayout="row">
+    <span style="font-size:30px; cursor:pointer" (click)="openNav()" class="d-block d-lg-none">&#9776;</span>
+    <!-- <img src="assets/images/logo.png" class="img pointer" height="100" width="260" routerLink="/home" /> -->
+    <!-- <span class="example-spacer"></span> -->
+    <!-- <a mat-raised-button type="button" color="accent" target="_blank" class="rounded-corner donate-button"
+        href="https://www.paypal.com/donate?hosted_button_id=HKGMNW4964CNY">Let's Donate</a> -->
+    <app-nav class="d-none d-xl-block" [screenSize]="'large'"></app-nav>
+</mat-toolbar>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <app-nav [screenSize]="'small'"></app-nav>
+</div>

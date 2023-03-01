@@ -1,0 +1,24 @@
+<div class="toolbar-div" [ngClass]="{'flex-container' : (screenSize === 'small')}">
+    <!-- <a mat-stroked-button type="button" style="margin-left: 15px;" color="primary" target="_blank"
+        class="rounded-corner" href="https://www.facebook.com/GiveTheNeedCharity">Follow</a>
+    <a mat-stroked-button type="button" style="margin-left: 15px;" color="primary" target="_blank"
+        class="rounded-corner"
+        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FGiveTheNeedCharity%2F&display=popup&ref=plugin&src=like&kid_directed_site=0">
+        Share
+    </a> -->
+    <span style="margin-left: 15px;" class="pointer font-weight-light" routerLink="/home"
+        routerLinkActive="active-link" (click)="onNavClick()">
+        <small> Banner</small></span>
+        <span style="margin-left: 15px;" class="pointer font-weight-light" routerLink="/youth"
+        routerLinkActive="active-link" (click)="onNavClick()">
+        <small> Youth</small></span>
+    <span style="margin-left: 15px;" class="pointer font-weight-light" routerLink="/community-services"
+        routerLinkActive="active-link" (click)="onNavClick()">
+        <small> Make A Difference</small></span>
+    <span style="margin-left: 15px;" class="pointer font-weight-light" routerLink="/blogs"
+        routerLinkActive="active-link" (click)="onNavClick()">
+        <small> Blog</small></span>
+    <!-- <span style="margin-left: 15px;" class="pointer font-weight-light" routerLink="/about-us"
+        routerLinkActive="active-link" (click)="onNavClick()">
+        <small> About Us</small></span> -->
+</div>

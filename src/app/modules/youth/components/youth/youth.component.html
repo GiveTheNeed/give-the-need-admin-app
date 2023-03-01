@@ -1,0 +1,153 @@
+<div class="container text-center p-4">
+
+    <h1>YOUTH</h1>
+
+    <div class="mt-5 p-3 text-center">
+        <p>GiveTheNeed Youth Chapter leads Youth Advocacy Programs, Mentoring, Webinars, Workshops, STEM Tutoring and
+            driving Community service programs.</p>
+        <!-- <div class="card-body"> -->
+        <!-- <p>GiveTheNeed Youth Chapter, initated free tutoring service to keep student on track in areas of STEM(Science,
+            Technology, Engineering, Math), Youth Advocacy, Mentoring, hosting Webinars, organizing Workshops and
+            driving Community Services</p> -->
+        <!-- </div> -->
+    </div>
+
+    <div class="card mt-5">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h4>Tutoring</h4>
+                    <img src="assets/images/tutoring.jpg" height="250" style="width:100%" alt="Image">
+                    <br><br>
+                    <p class="justify-content">
+                        Providing STEM ernichment programs for <br> 1st to 6th grades.
+                    </p>
+                    <div class="row mt-3 d-flex justify-content-start">
+                        <div class="col-md-6">
+                            <p>
+                                <strong>Students </strong>
+                                <br><br>
+                                <a type="button" mat-raised-button color="primary"
+                                    href="https://tinyurl.com/GiveTheNeedSeeker" target="_blank">Sign up</a>
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                                <strong>Tutors </strong>
+                                <br><br>
+                                <a type="button" mat-raised-button color="primary"
+                                    href="https://tinyurl.com/GiveTheNeedYouth" target="_blank">Sign up</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h4>Advocacy</h4>
+                    <img src="assets/images/advocacy.jpg" height="250" style="width:100%" alt="Image">
+                    <br><br>
+                    <p class="justify-content">Youth advocacy performed through work-shops, webinars or outreach
+                        programs with in the community
+                        to
+                        provide self awarness and advocate the issues.
+                        Mental-Health awarness
+                        Climate-Change
+                        Human-rights Equity
+                    </p>
+                    <a type="button" mat-raised-button color="primary" href="https://tinyurl.com/GiveTheNeedYouth"
+                        target="_blank">Join</a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h4>Webinar / Mentoring</h4>
+                    <img src="assets/images/webinar.jpg" height="250" style="width:100%" alt="Image">
+                    <br><br>
+                    <p class="justify-content"> Mentoring: Youth team supports mentorship program, join <a href=""
+                            target="_blank">Oraculi</a>.
+                    </p>
+                    <p class="justify-content"> Webinar: Sign-up here to receive more details on the webinars.</p>
+                    <a type="button" mat-raised-button color="primary" href="https://tinyurl.com/GiveTheNeedYouth"
+                        target="_blank">Join</a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h4>Community Services</h4>
+                    <img src="assets/images/charity.jpg" height="250" style="width:100%" alt="Image">
+                    <br><br>
+                    <p class="justify-content">GiveTheNeed youth volunteers are fully committed to make a difference by
+                        participating through
+                        community events - feed the hunger through Food Drives to food banks and homeless shelters,
+                        volunteering with challenging intellectually children.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h4>Extra-Curricular</h4>
+                    <img src="assets/images/extracurricular.jpg" height="250" style="width:100%" alt="Image">
+                    <br><br>
+                    <p class="justify-content">GiveTheNeed youth spends 1 hour every week to share and empower children
+                        Dance, Art, Music,
+                        etc...</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Awards</h4>
+                    <img src="assets/images/awards.jpg" height="250" style="width:100%" alt="Image">
+                    <br><br>
+                    <p class="justify-content">President's Volunteer Service Award
+                        GiveTheNeed is a certifying organization for the President's Volunteer Service Award
+                        Certifying Organizations verify and certify that a volunteer has met the requirements to receive
+                        a PVSA within a 12 month period specified by the Certifying Organization.
+                        <br>
+                        To find out PVSA eligiblity and submit volunteer hours
+                    </p>
+                    <a type="button" mat-raised-button color="primary" href="https://tinyurl.com/PVSAVolunteerHours"
+                        target="_blank">click here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="mt-5 p-5">
+        <h3 class="">Youth Team</h3><br>
+    </div> -->
+
+    <div id="band" class="mt-5 text-center">
+        <h3>YOUTH TEAM</h3>
+        <p><em>We love to help!</em></p>
+        <br>
+        <div class="row">
+            <div class="col-md-2 mb-4" *ngFor="let member of youthMembers">
+                <div class="text-center"><strong>{{member}}</strong></div>
+                <a data-toggle="collapse">
+                    <div class="image-div">
+                        <img src="assets/images/member.jpg" class="img-fluid rounded-circle" alt="Random Name">
+                    </div>
+                </a>
+                <div class="collapse">
+                    <p>Guitarist and Lead Vocalist</p>
+                    <p>Loves long walks on the beach</p>
+                    <p>Member since 1988</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h3>TUTORING TEAM</h3>
+        <br>
+        <div class="row">
+            <div class="col-md-2 mb-4" *ngFor="let member of tutoringMembers">
+                <div class="text-center"><strong>{{member?.name}}</strong></div>
+                <a data-toggle="collapse">
+                    <div class="image-div">
+                        <img [src]="member?.imageUrl" class="img-fluid rounded-circle" [alt]="member?.name">
+                    </div>
+                </a>
+                <div class="collapse">
+                    <p>Guitarist and Lead Vocalist</p>
+                    <p>Loves long walks on the beach</p>
+                    <p>Member since 1988</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <p>Reach out to us at: <a type="button" color="primary" href="youth@givetheneed.org"
+            target="_blank">youth@givetheneed.org</a></p>
+</div>

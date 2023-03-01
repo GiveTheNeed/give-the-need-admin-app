@@ -1,0 +1,32 @@
+.statement-text {
+    color: #89103f;
+    font-size: 5rem;
+    font-weight: 1000;
+}
+
+.text-primary {
+    color: #0071bc !important;
+}
+
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);
+}
+
+.carousel-indicators {
+    filter: invert(100%);
+}
+
+.carousel-caption {
+    filter: invert(100%);
+}
+
+.carousel-item > img {
+    height: 550px !important;
+}
+
+@media (max-width: 600px) {
+    .carousel-item > img {
+        height: 230px !important;
+    }
+}

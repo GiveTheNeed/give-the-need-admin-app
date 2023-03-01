@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="col-md-4 mb-2 fundraising-container" *ngFor="let item of fundraisingContent">
+        <h4>{{item?.title}}</h4>
+        <div class="image-div">
+            <img [src]="item?.imageUrl" class="d-block img-fluid rounded-corner" style="width:100%" [alt]="item?.alt">
+        </div>
+        <br>
+        <p [innerHTML]="item?.description" class="p-3 justify-content"></p>
+    </div>
+</div>
