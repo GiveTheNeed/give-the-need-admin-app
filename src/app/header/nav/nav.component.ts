@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+import { AuthService } from 'src/app/core/services';
 
 @Component({
   selector: 'app-nav',
@@ -11,7 +12,8 @@ export class NavComponent implements OnInit {
   @Input() screenSize!: string;
 
   constructor(
-    private breakpointObserver: BreakpointObserver
+    private breakpointObserver: BreakpointObserver,
+    private authService: AuthService
   ) {
     this.breakpointObserver.observe([
       "(max-width: 1200px)"
@@ -29,6 +31,10 @@ export class NavComponent implements OnInit {
 
   onNavClick() {
     (<HTMLInputElement>document.getElementById("mySidenav")).style.width = "0";
+  }
+
+  handleLogoutClick() {
+    this.authService.logout();
   }
 
 }

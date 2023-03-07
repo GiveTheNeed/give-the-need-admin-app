@@ -1,10 +1,13 @@
-<mat-toolbar fxLayout="row">
-    <span style="font-size:30px; cursor:pointer" (click)="openNav()" class="d-block d-lg-none">&#9776;</span>
-    <!-- <img src="assets/images/logo.png" class="img pointer" height="100" width="260" routerLink="/home" /> -->
-    <app-nav class="d-none d-xl-block" [screenSize]="'large'"></app-nav>
-</mat-toolbar>
+<ng-container *ngIf="isLoggedIn$ | async as isLoggedIn">
+    <mat-toolbar fxLayout="row">
+        <span style="font-size: 30px; cursor: pointer" (click)="openNav()" class="d-block d-lg-none">&#9776;</span>
+        <img src="assets/images/logo.png" height="80" class="rounded-circle"
+            *ngIf="isLoggedIn$ | async" style="margin-left: 1rem;" alt="Application Logo">
+        <app-nav class="d-none d-xl-block" [screenSize]="'large'"></app-nav>
+    </mat-toolbar>
 
-<div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-    <app-nav [screenSize]="'small'"></app-nav>
-</div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+        <app-nav [screenSize]="'small'"></app-nav>
+    </div>
+</ng-container>

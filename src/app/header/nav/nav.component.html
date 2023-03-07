@@ -6,10 +6,10 @@
         href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FGiveTheNeedCharity%2F&display=popup&ref=plugin&src=like&kid_directed_site=0">
         Share
     </a> -->
-    <span style="margin-left: 15px;" class="pointer font-weight-light" routerLink="/home"
-        routerLinkActive="active-link" (click)="onNavClick()">
+    <span style="margin-left: 15px;" class="pointer font-weight-light" routerLink="/home" routerLinkActive="active-link"
+        (click)="onNavClick()">
         <small> Banner</small></span>
-        <span style="margin-left: 15px;" class="pointer font-weight-light" routerLink="/youth"
+    <span style="margin-left: 15px;" class="pointer font-weight-light" routerLink="/youth"
         routerLinkActive="active-link" (click)="onNavClick()">
         <small> Youth</small></span>
     <span style="margin-left: 15px;" class="pointer font-weight-light" routerLink="/community-services"
@@ -21,4 +21,10 @@
     <!-- <span style="margin-left: 15px;" class="pointer font-weight-light" routerLink="/about-us"
         routerLinkActive="active-link" (click)="onNavClick()">
         <small> About Us</small></span> -->
+    <span class="text-end">
+        <mat-icon class="fixed-right-switch pointer float-end" aria-hidden="false" aria-label="Example logout icon"
+            (click)="handleLogoutClick()">
+            power_settings_new
+        </mat-icon>
+    </span>
 </div>
